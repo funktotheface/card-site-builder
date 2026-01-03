@@ -1,27 +1,30 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [site, setSite] = useState(null)
+  const [count, setCount] = useState(0);
+  const [site, setSite] = useState(null);
 
-  useEffect(() => {
-    // Fetch via /api/... so Vite proxy handles the tunnel
-    fetch('/api/sites/my-first-site')
-      .then(res => res.json())
-      .then(data => setSite(data))
-      .catch(console.error)
-  }, [])
+useEffect(() => {
+  fetch('http://localhost:3001/sites/my-first-site')
+    .then(res => res.json())
+    .then(data => {
+      console.log('Fetched site data:', data); // <-- this will show JSON in console
+      setSite(data);
+    })
+    .catch(console.error);
+}, []);
+
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -29,10 +32,10 @@ function App() {
       <h1>Vite + React</h1>
 
       <div className="card">
-        <button onClick={() => setCount(count + 1)}>
-          count is {count}
-        </button>
-        <p>Edit <code>src/App.jsx</code> and save to test HMR</p>
+        <button onClick={() => setCount(count + 1)}>count is {count}</button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
       </div>
 
       {site && (
@@ -46,7 +49,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

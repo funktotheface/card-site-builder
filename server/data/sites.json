@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "slug": "my-first-site",
+    "name": "My First Site",
+    "description": "This is a demo site to test the card rendering."
+  },
+  {
+    "slug": "my-second-site",
+    "name": "My Second Site",
+    "description": "Another demo site, just to show multiple cards."
+  }
+]

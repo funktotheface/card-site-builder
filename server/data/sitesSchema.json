@@ -1,0 +1,25 @@
+{
+  "id": "site-uuid",
+  "slug": "my-first-site",
+  "name": "My First Site",
+  "status": "draft | published",
+  "theme": {
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#ffffff",
+      "accent": "#ff6600"
+    },
+    "font": "inter",
+    "radius": "md"
+  },
+  "seo": {
+    "title": "",
+    "description": "",
+    "image": ""
+  },
+  "meta": {
+    "createdAt": "",
+    "updatedAt": ""
+  },
+  "cards": []
+}

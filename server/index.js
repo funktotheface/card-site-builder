@@ -19,7 +19,7 @@ const sitesPath = path.join(process.cwd(), 'data', 'sites.json');
 app.get('/sites/:slug', (req, res) => {
   const { slug } = req.params;
   const sites = JSON.parse(fs.readFileSync(sitesPath));
-  const site = sites.find(s => s.slug === slug);
+  const site = sites.find(s => s.meta.slug === slug);
   if (!site) return res.status(404).json({ error: 'Site not found' });
   res.json(site);
 });

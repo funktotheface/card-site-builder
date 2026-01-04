@@ -40,8 +40,8 @@ useEffect(() => {
 
       {site && (
         <div className="card">
-          <h2>{site.name}</h2>
-          <p>{site.description}</p>
+          <h2>{site.meta.name}</h2>
+          <p>{site.meta.description}</p>
         </div>
       )}
 

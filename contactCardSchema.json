@@ -1,0 +1,43 @@
+{
+  "id": "card-contact-001",
+  "type": "contact",
+  "order": 5,
+
+  "content": {
+    "headline": "Get in Touch",
+    "description": "We’d love to hear from you! Reach out via phone, email, or social media, or use the form below.",
+    
+    "contactInfo": {
+      "phone": "+44 1234 567890",
+      "email": "hello@mysite.com",
+      "socials": {
+        "facebook": "https://facebook.com/mysite",
+        "instagram": "https://instagram.com/mysite",
+        "twitter": "https://twitter.com/mysite",
+        "linkedin": "https://linkedin.com/company/mysite"
+      }
+    },
+    
+    "form": {
+      "fields": [
+        { "label": "Name", "type": "text", "name": "name", "required": true },
+        { "label": "Email", "type": "email", "name": "email", "required": true },
+        { "label": "Message", "type": "textarea", "name": "message", "required": true }
+      ],
+      "submitLabel": "Send Message",
+      "submitEndpoint": "/api/contact"  // placeholder, backend to be implemented
+    }
+  },
+
+  "style": {
+    "layout": "form-with-info",
+    "textAlign": "center",
+    "themeVariant": "primary"
+  },
+
+  "meta": {
+    "seoTitle": "Contact Us",
+    "seoDescription": "Get in touch with us via phone, email, or social media.",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/contact-hero.jpg"
+  }
+}

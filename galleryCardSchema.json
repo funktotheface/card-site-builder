@@ -1,0 +1,40 @@
+{
+  "id": "card-gallery-001",
+  "type": "gallery",
+  "order": 4,
+
+  "content": {
+    "headline": "Gallery",
+    "description": "Swipe through our collection of images.",
+    "images": [
+      {
+        "src": "https://res.cloudinary.com/demo/image/upload/gallery1.jpg",
+        "alt": "Sample Image 1",
+        "caption": "Optional caption 1"
+      },
+      {
+        "src": "https://res.cloudinary.com/demo/image/upload/gallery2.jpg",
+        "alt": "Sample Image 2",
+        "caption": "Optional caption 2"
+      }
+      // up to 25 images
+    ],
+    "cta": {
+      "label": "View More",
+      "target": "#contact"
+    }
+  },
+
+  "style": {
+    "layout": "carousel-with-grid",
+    "maxImages": 25,
+    "textAlign": "center",
+    "themeVariant": "primary"
+  },
+
+  "meta": {
+    "seoTitle": "Gallery",
+    "seoDescription": "Browse our latest photos and media.",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/gallery1.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "card-services-001",
+  "type": "services",
+  "order": 1,
+
+  "content": {
+    "headline": "What We Do",
+    "intro": "Clear, focused services designed to deliver results.",
+
+    "services": [
+      {
+        "id": "service-001",
+        "title": "⚡ Fast Websites",
+        "description": "Optimised builds that load instantly and feel smooth on any device."
+      },
+      {
+        "id": "service-002",
+        "title": "🎨 Custom Design",
+        "description": "Designed around your brand, not a recycled template."
+      },
+      {
+        "id": "service-003",
+        "title": "📱 Mobile-First UX",
+        "description": "Built for thumbs first, desktops second."
+      }
+    ],
+
+    "cta": {
+      "label": "View Pricing",
+      "target": "#contact"
+    }
+  },
+
+  "style": {
+    "layout": "list",
+    "textAlign": "center",
+    "themeVariant": "secondary"
+  },
+
+  "meta": {
+    "seoTitle": "Services",
+    "seoDescription": "Explore our core services and how we help businesses grow.",
+    "featuredImage": null
+  }
+}

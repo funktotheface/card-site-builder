@@ -1,0 +1,33 @@
+{
+  "id": "card-about-001",
+  "type": "about",
+  "order": 2,
+
+  "content": {
+    "headline": "About Us",
+    "text": "We are a small team of digital explorers passionate about building engaging web experiences. Our mission is to turn ideas into interactive reality.",
+    
+    "media": {
+      "type": "image", 
+      "src": "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      "alt": "Team working together in the office"
+    },
+
+    "cta": {
+      "label": "Learn More",
+      "target": "#services"
+    }
+  },
+
+  "style": {
+    "layout": "media-left-text-right",
+    "textAlign": "center",
+    "themeVariant": "primary"
+  },
+
+  "meta": {
+    "seoTitle": "About Us",
+    "seoDescription": "Learn more about our team, vision, and mission.",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/sample.jpg"
+  }
+}

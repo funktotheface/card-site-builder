@@ -1,0 +1,40 @@
+{
+  "id": "card-hero-001",
+  "type": "hero",
+  "order": 0,
+
+  "content": {
+    "headline": "Premium Card-Based Websites",
+    "subheadline": "Fast, modern, swipeable sites built for small businesses",
+    "tagline": "Your entire web presence. One elegant stack.",
+
+    "cta": {
+      "label": "Get in Touch",
+      "target": "#contact"
+    }
+  },
+
+  "media": {
+    "logo": {
+      "url": "https://res.cloudinary.com/demo/image/upload/v123/logo.png",
+      "alt": "Company logo"
+    },
+    "background": {
+      "type": "image",
+      "url": "https://res.cloudinary.com/demo/image/upload/v123/hero-bg.jpg",
+      "alt": "Abstract background image"
+    }
+  },
+
+  "style": {
+    "textAlign": "center",
+    "themeVariant": "primary",
+    "overlay": true
+  },
+
+  "meta": {
+    "seoTitle": "Premium Card-Based Websites",
+    "seoDescription": "Modern swipeable websites designed for performance and style.",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v123/seo.jpg"
+  }
+}

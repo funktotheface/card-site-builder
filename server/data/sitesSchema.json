@@ -1,25 +1,66 @@
 {
-  "id": "site-uuid",
-  "slug": "my-first-site",
-  "name": "My First Site",
-  "status": "draft | published",
-  "theme": {
-    "colors": {
-      "primary": "#000000",
-      "secondary": "#ffffff",
-      "accent": "#ff6600"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Site",
+  "description": "Schema for a site composed of ordered cards",
+  "type": "object",
+  "required": ["id", "slug", "name", "status", "theme", "cards"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "published"] },
+
+    "theme": {
+      "type": "object",
+      "description": "Three-color model used for CSS vars",
+      "required": ["bg", "highlight", "secondary"],
+      "properties": {
+        "bg": { "type": "string", "description": "Background color" },
+        "highlight": { "type": "string", "description": "CTA / accent color" },
+        "secondary": { "type": "string", "description": "Text accents / borders" },
+        "font": { "type": "string", "default": "inter" },
+        "radius": { "type": "string", "default": "md" }
+      }
     },
-    "font": "inter",
-    "radius": "md"
+
+    "seo": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["scroll", "none"] },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "target": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "cards": {
+      "type": "array",
+      "items": { "$ref": "card" }
+    }
   },
-  "seo": {
-    "title": "",
-    "description": "",
-    "image": ""
-  },
-  "meta": {
-    "createdAt": "",
-    "updatedAt": ""
-  },
-  "cards": []
+  "additionalProperties": false
 }

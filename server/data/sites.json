@@ -1,149 +1,235 @@
-[{
-  "meta": {
-    "id": "site-001",
-    "name": "My First Card Site",
-    "slug": "my-first-site",
-    "description": "A demo card-based microsite built for rapid iteration",
-    "createdAt": "2026-01-04T10:00:00Z",
-    "updatedAt": "2026-01-04T18:30:00Z",
-    "status": "published"
-  },
-
-  "theme": {
-    "primary": "#1E293B",
-    "secondary": "#38BDF8",
-    "accent": "#FACC15",
-    "background": "light",
-    "font": "inter"
-  },
-
-  "navigation": {
-    "type": "scroll",
-    "items": [
-      { "label": "Home", "target": "hero-1" },
-      { "label": "About", "target": "text-1" },
-      { "label": "Gallery", "target": "gallery-1" },
-      { "label": "Contact", "target": "contact-1" }
-    ]
-  },
-
-  "cards": [
-    {
-      "id": "hero-1",
-      "type": "hero",
-      "order": 1,
-      "visibility": "public",
-      "data": {
-        "headline": "Welcome to My First Site",
-        "subheadline": "A fast, flexible, card-based website system",
-        "backgroundImage": "cloudinary://demo/hero-bg",
-        "cta": {
-          "label": "See the Work",
-          "action": "scroll",
+[
+  {
+    "meta": {
+      "id": "site-001",
+      "name": "My First Card Site",
+      "slug": "my-first-site",
+      "description": "A demo card-based microsite built for rapid iteration",
+      "createdAt": "2026-01-04T10:00:00Z",
+      "updatedAt": "2026-01-04T18:30:00Z",
+      "status": "published"
+    },
+    "theme": {
+      "primary": "#1E293B",
+      "secondary": "#38BDF8",
+      "accent": "#FACC15",
+      "background": "light",
+      "font": "inter"
+    },
+    "navigation": {
+      "type": "scroll",
+      "items": [
+        {
+          "label": "Home",
+          "target": "hero-1"
+        },
+        {
+          "label": "About",
+          "target": "text-1"
+        },
+        {
+          "label": "Gallery",
           "target": "gallery-1"
+        },
+        {
+          "label": "Contact",
+          "target": "contact-1"
+        }
+      ]
+    },
+    "cards": [
+      {
+        "id": "hero-1",
+        "type": "hero",
+        "order": 1,
+        "visibility": "public",
+        "content": {
+          "headline": "Welcome to My First Site",
+          "subheadline": "A fast, flexible, card-based website system",
+          "backgroundImage": "cloudinary://demo/hero-bg",
+          "cta": {
+            "label": "See the Work",
+            "action": "scroll",
+            "target": "gallery-1"
+          }
+        }
+      },
+      {
+        "id": "text-1",
+        "type": "text",
+        "order": 2,
+        "visibility": "public",
+        "content": {
+          "title": "What This Is",
+          "body": "This site is built entirely from reusable cards. Each section you see is powered by structured JSON rather than hard-coded pages.",
+          "alignment": "center"
+        }
+      },
+      {
+        "id": "features-1",
+        "type": "features",
+        "order": 3,
+        "visibility": "public",
+        "content": {
+          "items": [
+            {
+              "title": "Fast Setup",
+              "description": "Spin up a new site in minutes using predefined card types.",
+              "icon": "zap"
+            },
+            {
+              "title": "Flexible Design",
+              "description": "Three-color theming keeps things stylish without chaos.",
+              "icon": "palette"
+            },
+            {
+              "title": "Scalable",
+              "description": "Media is handled via Cloudinary for performance and growth.",
+              "icon": "layers"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gallery-1",
+        "type": "gallery",
+        "order": 4,
+        "visibility": "public",
+        "content": {
+          "layout": "grid",
+          "images": [
+            {
+              "src": "cloudinary://demo/gallery-1",
+              "alt": "Project screenshot one"
+            },
+            {
+              "src": "cloudinary://demo/gallery-2",
+              "alt": "Project screenshot two"
+            },
+            {
+              "src": "cloudinary://demo/gallery-3",
+              "alt": "Project screenshot three"
+            }
+          ]
+        }
+      },
+      {
+        "id": "quote-1",
+        "type": "quote",
+        "order": 5,
+        "visibility": "public",
+        "content": {
+          "quote": "This system makes launching sites ridiculously easy.",
+          "author": "A Very Happy Developer"
+        }
+      },
+      {
+        "id": "contact-1",
+        "type": "contact",
+        "order": 6,
+        "visibility": "public",
+        "content": {
+          "email": "hello@example.com",
+          "phone": "+44 7700 900123",
+          "form": true,
+          "formEndpoint": "/api/contact"
+        }
+      },
+      {
+        "id": "footer-1",
+        "type": "footer",
+        "order": 7,
+        "visibility": "public",
+        "content": {
+          "text": "© 2026 My First Card Site",
+          "links": [
+            {
+              "label": "Privacy",
+              "url": "/privacy"
+            },
+            {
+              "label": "Terms",
+              "url": "/terms"
+            }
+          ]
         }
       }
+    ],
+    "slug": "my-first-site"
+  },
+  {
+    "id": "site-1767623818069",
+    "name": "sitesbydoug",
+    "slug": "sitesbydoug",
+    "status": "published",
+    "theme": {
+      "bg": "#ff0000",
+      "highlight": "#000000",
+      "secondary": "#00ff2a"
     },
-
-    {
-      "id": "text-1",
-      "type": "text",
-      "order": 2,
-      "visibility": "public",
-      "data": {
-        "title": "What This Is",
-        "body": "This site is built entirely from reusable cards. Each section you see is powered by structured JSON rather than hard-coded pages.",
-        "alignment": "center"
-      }
-    },
-
-    {
-      "id": "features-1",
-      "type": "features",
-      "order": 3,
-      "visibility": "public",
-      "data": {
-        "items": [
-          {
-            "title": "Fast Setup",
-            "description": "Spin up a new site in minutes using predefined card types.",
-            "icon": "zap"
-          },
-          {
-            "title": "Flexible Design",
-            "description": "Three-color theming keeps things stylish without chaos.",
-            "icon": "palette"
-          },
-          {
-            "title": "Scalable",
-            "description": "Media is handled via Cloudinary for performance and growth.",
-            "icon": "layers"
-          }
-        ]
-      }
-    },
-
-    {
-      "id": "gallery-1",
-      "type": "gallery",
-      "order": 4,
-      "visibility": "public",
-      "data": {
-        "layout": "grid",
-        "images": [
-          {
-            "src": "cloudinary://demo/gallery-1",
-            "alt": "Project screenshot one"
-          },
-          {
-            "src": "cloudinary://demo/gallery-2",
-            "alt": "Project screenshot two"
-          },
-          {
-            "src": "cloudinary://demo/gallery-3",
-            "alt": "Project screenshot three"
-          }
-        ]
-      }
-    },
-
-    {
-      "id": "quote-1",
-      "type": "quote",
-      "order": 5,
-      "visibility": "public",
-      "data": {
-        "quote": "This system makes launching sites ridiculously easy.",
-        "author": "A Very Happy Developer"
-      }
-    },
-
-    {
-      "id": "contact-1",
-      "type": "contact",
-      "order": 6,
-      "visibility": "public",
-      "data": {
-        "email": "hello@example.com",
-        "phone": "+44 7700 900123",
-        "form": true,
-        "formEndpoint": "/api/contact"
-      }
-    },
-
-    {
-      "id": "footer-1",
-      "type": "footer",
-      "order": 7,
-      "visibility": "public",
-      "data": {
-        "text": "© 2026 My First Card Site",
-        "links": [
-          { "label": "Privacy", "url": "/privacy" },
-          { "label": "Terms", "url": "/terms" }
-        ]
-      }
+    "cards": [],
+    "meta": {
+      "createdAt": "2026-01-05T14:36:58.069Z",
+      "updatedAt": "2026-01-05T14:36:58.069Z"
     }
-  ]
-}
+  },
+  {
+    "id": "site-1767624151906",
+    "name": "workingsite",
+    "slug": "workingsitenew",
+    "status": "published",
+    "theme": {
+      "bg": "#ffffff",
+      "highlight": "#2563eb",
+      "secondary": "#000000"
+    },
+    "cards": [
+      {
+        "id": "card-1767624118706",
+        "type": "hero",
+        "order": 0,
+        "visibility": "public",
+        "content": {
+          "headline": "this is my working hero card",
+          "subheadline": "a working hero crad"
+        }
+      }
+    ],
+    "meta": {
+      "createdAt": "2026-01-05T14:42:31.906Z",
+      "updatedAt": "2026-01-05T14:42:31.906Z"
+    }
+  },
+  {
+    "id": "site-1767628011934",
+    "name": "shalom",
+    "slug": "shalom64",
+    "status": "published",
+    "theme": {
+      "bg": "#ffffff",
+      "highlight": "#2563eb",
+      "secondary": "#000000"
+    },
+    "cards": [],
+    "meta": {
+      "createdAt": "2026-01-05T15:46:51.934Z",
+      "updatedAt": "2026-01-05T15:46:51.935Z"
+    }
+  },
+  {
+    "id": "site-1767637592252",
+    "name": "etst2",
+    "slug": "123",
+    "status": "published",
+    "theme": {
+      "bg": "#6d5a5a",
+      "highlight": "#ff99e9",
+      "secondary": "#ffffff"
+    },
+    "cards": [],
+    "meta": {
+      "createdAt": "2026-01-05T18:26:32.252Z",
+      "updatedAt": "2026-01-05T18:26:32.253Z"
+    }
+  }
 ]

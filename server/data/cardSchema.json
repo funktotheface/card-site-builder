@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Card",
+  "description": "Schema for a single content card rendered on the site",
+  "type": "object",
+  "required": ["id", "type", "order", "visibility", "content"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "type": {
+      "type": "string",
+      "enum": [
+        "hero",
+        "about",
+        "services",
+        "gallery",
+        "contact",
+        "text",
+        "features",
+        "quote",
+        "footer"
+      ]
+    },
+    "order": { "type": "integer", "minimum": 0 },
+    "visibility": {
+      "type": "string",
+      "enum": ["public", "private", "draft"],
+      "default": "public"
+    },
+    "content": { "type": "object", "additionalProperties": true },
+    "media": { "type": "object", "additionalProperties": true },
+    "style": { "type": "object", "additionalProperties": true },
+    "meta": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}
